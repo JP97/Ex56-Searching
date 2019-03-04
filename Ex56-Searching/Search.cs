@@ -10,11 +10,18 @@ namespace Ex56_Searching
     {
 		public static int FindPositionInList_Linear(int[] data, int value)
 		{
-			for (int i = 0; i < data.Length; i++)
+			bool ikkefundet = true;
+			int i = 0;
+
+			while (ikkefundet && i < data.Length)
 			{
 				if(value == data[i])
 				{
 					return i;
+				}
+				else
+				{
+					i++;
 				}
 			}
 			return -1;
